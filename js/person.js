@@ -1,4 +1,8 @@
-let personDataLog = (
-    firstname = 'John',
-    lastname = 'Doe',
-    age = 33 ) => { return console.log("My name is " + firstname + " " + lastname + ". "  + "I'm " + age + " old.");}
+const personDataLog = (users = {}) => {
+    const user = Object.assign({
+        firstname: 'John',
+        lastname: 'Doe',
+        age: 33
+    }, users);
+    return 'My name is ' + user.firstname + ' ' + user.lastname + '. ' + 'I\'m ' + user.age + ' old.';
+}
